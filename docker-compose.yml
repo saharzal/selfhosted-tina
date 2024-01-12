@@ -1,20 +1,44 @@
 version: "3.8"
 services:
-  mongodb:
-    image: mongo
-    container_name: mongodb
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - /home/saz/mongodb/database:/data/db
-    ports:
-      - 27017:27017
-    restart: unless-stopped
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    volumes:
+      - .:/src
     depends_on:
-      - mongodb
+      mongo:
+        condition: service_healthy
+    links: 
+      - mongo
+    # restart: always
+    # network: 
+    #   - myNetwork
+    # links:
+    #   - mongo2
+    # networks:
+    #   - node-network
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017
+    volumes:
+      - ./database:/data/db
+    ports:
+      - "27017:27017"
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:27017"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    # networks:
+    #   - node-network
   
+
+# networks:
+#   node-network:
+#     driver: bridge
