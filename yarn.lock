@@ -3436,12 +3436,19 @@
     yup "^0.32.9"
     zod "^3.14.3"
 
-"@tinacms/datalayer@1.2.29", "@tinacms/datalayer@^1.2.29":
+"@tinacms/datalayer@1.2.29":
   version "1.2.29"
   resolved "https://registry.yarnpkg.com/@tinacms/datalayer/-/datalayer-1.2.29.tgz#f44cc6bbbfb2ac97f5e060fe86850cd364512afa"
   integrity sha512-TV3UqmD6h159+HLRytHgXXChIBP0+NHsDqe0tFiHtyhNfdYpHt0NohfxatGzHLYuqcui4mFOwQQs8rKGP9lSRA==
   dependencies:
     "@tinacms/graphql" "1.4.29"
+
+"@tinacms/datalayer@^1.2.33":
+  version "1.2.33"
+  resolved "https://registry.yarnpkg.com/@tinacms/datalayer/-/datalayer-1.2.33.tgz#344fe0c68556fa6c9e46b5b29367e7a8ba3e7642"
+  integrity sha512-b3f0wyANaW/gs9RMh4ySYLkOvnsrIpVzRWE8jE08BiRjg7v3nUvXJe30qR9srOBrDfm3XNNXb2InIS8+hQbzEQ==
+  dependencies:
+    "@tinacms/graphql" "1.4.33"
 
 "@tinacms/graphql@1.4.29":
   version "1.4.29"
@@ -3451,6 +3458,38 @@
     "@iarna/toml" "^2.2.5"
     "@tinacms/mdx" "1.3.22"
     "@tinacms/schema-tools" "1.4.14"
+    abstract-level "^1.0.3"
+    body-parser "^1.19.0"
+    cors "^2.8.5"
+    dataloader "^2.0.0"
+    date-fns "^2.21.1"
+    encoding-down "^7.1.0"
+    estree-walker "^3.0.0"
+    fast-glob "^3.2.5"
+    fs-extra "^9.0.1"
+    glob-parent "^6.0.2"
+    graphql "15.8.0"
+    gray-matter "^4.0.2"
+    isomorphic-git "^1.21.0"
+    js-sha1 "^0.6.0"
+    js-yaml "^3.14.1"
+    jsonpath-plus "^6.0.1"
+    lodash "^4.17.20"
+    many-level "^2.0.0"
+    micromatch "4.0.5"
+    normalize-path "^3.0.0"
+    readable-stream "^4.3.0"
+    scmp "^2.1.0"
+    yup "^0.32.9"
+
+"@tinacms/graphql@1.4.33":
+  version "1.4.33"
+  resolved "https://registry.yarnpkg.com/@tinacms/graphql/-/graphql-1.4.33.tgz#e96382412932b26d1fc5f5ef497a9dda2a96745f"
+  integrity sha512-r4iPytCix5gDuALtoAmu99SGY6uazqKMPsIa7n27gSfCoQuBWnSyWWFfkrLz4yVOpU8bPAuiNK8GgPzAbvg9qA==
+  dependencies:
+    "@iarna/toml" "^2.2.5"
+    "@tinacms/mdx" "1.3.23"
+    "@tinacms/schema-tools" "1.4.15"
     abstract-level "^1.0.3"
     body-parser "^1.19.0"
     cors "^2.8.5"
@@ -3511,6 +3550,42 @@
     uvu "0.5.6"
     vfile-message "3.1.4"
 
+"@tinacms/mdx@1.3.23":
+  version "1.3.23"
+  resolved "https://registry.yarnpkg.com/@tinacms/mdx/-/mdx-1.3.23.tgz#219314ef217a3910a0595fe01c7c11146d13c9c4"
+  integrity sha512-EnBXXEkOLJ+OiL1hOCfXoBjGMy7MZr7FmNJ71r91UBHXN0gPPYpxUSVwfQ5TnPKmVNgRfFI7IVbZZvmX8vqXhw==
+  dependencies:
+    "@tinacms/schema-tools" "1.4.15"
+    acorn "8.8.2"
+    ccount "2.0.1"
+    estree-util-is-identifier-name "2.1.0"
+    lodash-es "4.17.21"
+    mdast-util-compact "4.1.1"
+    mdast-util-directive "2.2.4"
+    mdast-util-from-markdown "1.3.0"
+    mdast-util-gfm "2.0.2"
+    mdast-util-mdx "2.0.1"
+    mdast-util-mdx-jsx "2.1.2"
+    mdast-util-to-markdown "1.5.0"
+    micromark-extension-gfm "2.0.3"
+    micromark-factory-mdx-expression "1.0.7"
+    micromark-factory-space "1.0.0"
+    micromark-factory-whitespace "1.0.0"
+    micromark-util-character "1.1.0"
+    micromark-util-symbol "1.0.1"
+    micromark-util-types "1.0.2"
+    parse-entities "4.0.1"
+    prettier "^2.7.1"
+    remark "14.0.2"
+    remark-gfm "^2.0.0"
+    remark-mdx "2.3.0"
+    stringify-entities "4.0.3"
+    unist-util-source "4.0.2"
+    unist-util-stringify-position "3.0.3"
+    unist-util-visit "4.1.2"
+    uvu "0.5.6"
+    vfile-message "3.1.4"
+
 "@tinacms/metrics@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@tinacms/metrics/-/metrics-1.0.2.tgz#cf4d81236c2bc4c37c4fda37653e9241e1f8908f"
@@ -3522,6 +3597,15 @@
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/@tinacms/schema-tools/-/schema-tools-1.4.14.tgz#a1a6372f09f09154bf256509c9882f186667e902"
   integrity sha512-wzEByPYXeGJDgB1IO6xe+xeqyquARvFgj50QmVDPJihLlrp0DwNMEFWafEaoIFRR17aLahgQZKzKgKdlED5XDA==
+  dependencies:
+    picomatch-browser "2.2.6"
+    url-pattern "^1.0.3"
+    zod "^3.14.3"
+
+"@tinacms/schema-tools@1.4.15":
+  version "1.4.15"
+  resolved "https://registry.yarnpkg.com/@tinacms/schema-tools/-/schema-tools-1.4.15.tgz#8d21e865770127cc6184ccfc0cab77bf613e0ed7"
+  integrity sha512-fVeYpxKTRdf7mc4+BDj0HmEQ2Pi+iapXFj0QIdlIvj5TmHsQELt8rTkpiwbUELj07Un5iD/+dYIrwZWbIrPoBw==
   dependencies:
     picomatch-browser "2.2.6"
     url-pattern "^1.0.3"
